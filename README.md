@@ -36,5 +36,7 @@ Follow these steps to run the project locally:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/movie-catalogue-system.git
-cd movie-catalogue-system
+git clone https://github.com/manavpatel1310/Movie-search-Final-Project.git
+cd Movie-search-Final-Project
+
+[Watch Demo Video](assets/demovideo.avi)
