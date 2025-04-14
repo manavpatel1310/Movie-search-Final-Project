@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Favorite Movies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*  favorites page */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .movie-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            margin-bottom: 15px;
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .movie-details {
+            padding: 15px;
+        }
+
+        .movie-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .movie-release-date {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">My Favorite 🤗</h1>
+
+        <!-- Display Favorite Movies -->
+        <div th:each="movie : ${favorites}" class="row">
+            <div class="col-md-3">
+                <div class="movie-card">
+                    <img th:src="${movie.posterUrl}" alt="Movie Poster">
+                    <div class="movie-details">
+                        <h3 class="movie-title" th:text="${movie.title}"></h3>
+                        <a th:href="@{/movie/{id}(id=${movie.id})}" class="btn btn-info btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Home Button -->
+        <div class="back-button">
+            <a href="/" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
