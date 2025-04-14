@@ -10,6 +10,12 @@ A Movie Catalogue System built with Java Spring Boot, integrating The Movie Data
 - **Favorites Management**: Users can mark movies as favorites and view/manage their favorite movies.
 - **In-memory Database**: Favorite movies are stored in an H2 database that is used for this project.
 
+# Demo
+
+Here’s a short demo of the application:
+
+![Demo Video](assets/demovideo.avi)
+
 ## 🛠️ Technology Stack
 
 - **Backend**: Java with Spring Boot
@@ -39,4 +45,3 @@ Follow these steps to run the project locally:
 git clone https://github.com/manavpatel1310/Movie-search-Final-Project.git
 cd Movie-search-Final-Project
 
-[Watch Demo Video](assets/demovideo.avi)
